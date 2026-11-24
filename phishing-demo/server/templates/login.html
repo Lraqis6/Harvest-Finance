@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>统一身份认证 - 校园门户</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+         background: #eef2f7; color: #1f2937; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+  .card { width: 960px; max-width: 94vw; background: #fff; border-radius: 14px; overflow: hidden;
+          box-shadow: 0 18px 48px rgba(15, 35, 70, .16); display: flex; }
+  .brand { width: 38%; padding: 40px 32px; color: #fff; display: flex; flex-direction: column; justify-content: space-between;
+           background: linear-gradient(155deg, #0b3d91 0%, #14508f 55%, #0a2f6e 100%); }
+  .brand .logo { width: 46px; height: 46px; border-radius: 12px; background: rgba(255,255,255,.16);
+                 display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 700; }
+  .brand h1 { font-size: 21px; margin: 22px 0 8px; letter-spacing: .5px; }
+  .brand p { font-size: 13px; line-height: 1.8; color: rgba(255,255,255,.78); margin: 0; }
+  .brand .tip { font-size: 12px; color: rgba(255,255,255,.6); border-top: 1px solid rgba(255,255,255,.18); padding-top: 14px; }
+  .form { flex: 1; padding: 46px 48px; }
+  .form h2 { margin: 0 0 6px; font-size: 20px; }
+  .form .sub { color: #6b7280; font-size: 13px; margin-bottom: 26px; }
+  label { display: block; font-size: 13px; color: #374151; margin: 16px 0 7px; }
+  input[type=text], input[type=password] { width: 100%; padding: 11px 13px; border: 1px solid #d1d5db; border-radius: 8px;
+        font-size: 14px; outline: none; transition: border-color .15s, box-shadow .15s; }
+  input[type=text]:focus, input[type=password]:focus { border-color: #1d4ed8; box-shadow: 0 0 0 3px rgba(29,78,216,.12); }
+  .row { display: flex; align-items: center; justify-content: space-between; margin: 16px 0 22px; font-size: 13px; }
+  .row a { color: #1d4ed8; text-decoration: none; }
+  button { width: 100%; padding: 12px; border: 0; border-radius: 8px; background: #1d4ed8; color: #fff;
+           font-size: 15px; letter-spacing: 2px; cursor: pointer; }
+  button:hover { background: #1a45be; }
+  .foot { margin-top: 26px; font-size: 12px; color: #9ca3af; text-align: center; line-height: 1.7; }
+  .demo-mark { display: inline-block; margin-top: 10px; padding: 3px 9px; border-radius: 999px;
+               background: #fef3c7; color: #92400e; font-size: 11px; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="brand">
+      <div>
+        <div class="logo">CAS</div>
+        <h1>校园统一身份认证</h1>
+        <p>一次登录，访问邮箱、教务、图书馆与在线学习平台。<br>请使用学号或工号登录。</p>
+      </div>
+      <div class="tip">安全提示：学校不会通过邮件索取您的密码。</div>
+    </div>
+    <div class="form">
+      <h2>账号登录</h2>
+      <div class="sub">请使用统一身份认证账号登录</div>
+      <form method="POST" action="/login" autocomplete="off">
+        <label for="u">学号 / 工号</label>
+        <input id="u" name="username" type="text" placeholder="例如 2023123456" required>
+        <label for="p">密码</label>
+        <input id="p" name="password" type="password" placeholder="请输入密码" required>
+        <div class="row">
+          <label style="margin:0;display:flex;align-items:center;gap:6px;color:#4b5563;">
+            <input type="checkbox" name="remember" style="width:auto;"> 记住我
+          </label>
+          <a href="#">忘记密码？</a>
+        </div>
+        <button type="submit">登 录</button>
+      </form>
+      <div class="foot">
+        © 2026 信息网络中心 · 服务热线 0000-00000000<br>
+        <span class="demo-mark">安全演练页面 · 不会收集真实密码</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

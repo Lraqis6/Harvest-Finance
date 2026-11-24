@@ -1,0 +1,11 @@
+out/
+cache/
+broadcast/
+.env
+_work/
+*.log
+node_modules/
+__pycache__/
+*.pyc
+phishing-demo/captures/
+phishing-demo/_edgeprofile/

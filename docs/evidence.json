@@ -1,0 +1,66 @@
+{
+  "block": 11129473,
+  "runs": [
+    {
+      "rounds": 1,
+      "profit": "101783785134",
+      "shares": "51456280967115",
+      "deposited": "49977468555526",
+      "redeemed": "50298684245958"
+    },
+    {
+      "rounds": 3,
+      "profit": "715118195636",
+      "shares": "52333322836527",
+      "deposited": "50574381418380",
+      "redeemed": "50894567909953"
+    }
+  ],
+  "gasUsed": 11312315,
+  "fingerprint": [
+    {
+      "address": "0xf0358e8c3CD5Fa238a29301d0bEa3D63A17bEdBE",
+      "name": "FARM_USDC",
+      "symbol": "fUSDC",
+      "verdict": "HARVEST_V1_CURVE_ORACLE_VAULT",
+      "score": 100,
+      "codeHash": "0x3e408b75132df407ac61afab386591da3856df41d255a08712f8085e890ff6f2",
+      "implementation": "0x9b3be0cc5dd26fd0254088d03d8206792715588b",
+      "dependency": {
+        "strategyIsContract": true,
+        "depositArbCheck": true,
+        "arbGateOpenNow": true,
+        "usesCurveYPool": true,
+        "curvePoolAddress": "0x45F783CCE6B7FF23B2ab2D70e416cdb7D6055f51",
+        "strategySelectors": {
+          "depositArbCheck()": true,
+          "balanceOfPool()": false,
+          "harvest()": false,
+          "want()": false
+        }
+      }
+    },
+    {
+      "address": "0x053c80eA73Dc6941F518a68E2FC52Ac45BDE7c9C",
+      "name": "FARM_USDT",
+      "symbol": "fUSDT",
+      "verdict": "HARVEST_V1_CURVE_ORACLE_VAULT",
+      "score": 100,
+      "codeHash": "0x3e408b75132df407ac61afab386591da3856df41d255a08712f8085e890ff6f2",
+      "implementation": "0x9b3be0cc5dd26fd0254088d03d8206792715588b",
+      "dependency": {
+        "strategyIsContract": true,
+        "depositArbCheck": true,
+        "arbGateOpenNow": true,
+        "usesCurveYPool": true,
+        "curvePoolAddress": "0x45F783CCE6B7FF23B2ab2D70e416cdb7D6055f51",
+        "strategySelectors": {
+          "depositArbCheck()": true,
+          "balanceOfPool()": false,
+          "harvest()": false,
+          "want()": false
+        }
+      }
+    }
+  ]
+}
